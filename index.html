@@ -5,8 +5,12 @@
 		<script src="colorle.js"></script>
 	</head>
 	<body style = "background-color: rgb(0,0,0)">
-		<input autocomplete="off" type="text" id="guess">
+		<input autocomplete="off" type="text" id="guess" onkeydown="getDist(this)">
 		<br>
-		<input autocomplete="off" type="text" id="answer">
+		<input autocomplete="off" type="hidden" id="answer">
+		<br>
+		<input autocomplete="off" type="button" id="butt" onclick="getDist(this)" value="Guess!">
+		<br>
+		<input autocomplete="off" type="text" id="dist">
 	</body>
 </html>
