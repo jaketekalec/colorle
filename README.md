@@ -1,0 +1,1 @@
+This is a Wordle for colors. It shows you a color, you guess, and it tells you how close your guess is.
