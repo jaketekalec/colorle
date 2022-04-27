@@ -40,7 +40,8 @@ function colorDist(c1,c2) {
 }
 
 function getDist(e) {
-	if(event.key != 'Enter') return;
+	console.log(event.type)
+	if(event.key != 'Enter' && event.type != "click") return;
 	let g = hexToArr(document.getElementById("guess").value);
 	let a = hexToArr(document.getElementById("answer").value);
 
