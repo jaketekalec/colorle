@@ -44,7 +44,22 @@ function getDist(e) {
 	let g = hexToArr(document.getElementById("guess").value);
 	let a = hexToArr(document.getElementById("answer").value);
 
-	document.getElementById("dist").value = colorDist(g,a);
+	let table = document.getElementById("guesses")
+	let row = document.createElement("tr");
+	let guessData = document.createElement("td");
+	let distData = document.createElement("td");
+
+	let dist = colorDist(g,a);
+
+	guessData.innerHTML = g;
+	distData.innerHTML = dist;
+
+	document.getElementById("dist").value = dist;
+
+	row.appendChild(guessData);
+	row.appendChild(distData);
+
+	table.prepend(row);
 }
 
 window.onload = function main() {
