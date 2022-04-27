@@ -49,9 +49,9 @@ function getDist(e) {
 	let guessData = document.createElement("td");
 	let distData = document.createElement("td");
 
-	let dist = colorDist(g,a);
+	let dist = colorDist(g,a).toFixed(2);
 
-	guessData.innerHTML = g;
+	guessData.innerHTML = toHexString(g);
 	distData.innerHTML = dist;
 
 	document.getElementById("dist").value = dist;
